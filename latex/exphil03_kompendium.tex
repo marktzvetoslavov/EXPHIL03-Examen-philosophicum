@@ -1,0 +1,831 @@
+\documentclass[a4paper]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc,url}
+\usepackage[norsk]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[justification=centering]{caption}
+\usepackage{listingsutf8}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage{placeins}
+%\usepackage{subcaption}
+\usepackage{color}
+\usepackage[square,numbers]{natbib}
+\usepackage{upgreek}
+\usepackage{float}
+\usepackage{matlab-prettifier}
+%\usepackage[justification=centering]{caption}
+\usepackage{afterpage}
+\usepackage{csquotes}    % better quotations
+\usepackage[nottoc]{tocbibind} % References in table of contents
+\bibliographystyle{abbrvnat}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{mylilas}{rgb}{255,0,0}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=cyan
+}
+
+\graphicspath{{../bileter/}}
+
+\lstset{
+    language=Matlab,%
+    inputencoding=utf8/latin1,
+    frame = shadowbox,
+    basicstyle=\tiny,
+    %style = Matlab-editor,
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,
+    numberstyle={\tiny \color{black}},% size/color of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break,if,while,return},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},
+}
+
+
+\title{\bigskip EXPHIL03, vår 2017 \\[1cm] KOMPENDIUM \\[5cm]}
+
+\author{Torleif Skår - github.com/tskaar\\Lars André Møen - github.com/7arsandre }
+\begin{document}
+\maketitle
+\onecolumn
+\tableofcontents
+\clearpage
+\twocolumn
+\onecolumn
+
+\section{Pensum}
+\subsection{Litteratur}
+    \begin{center}
+        \textbf{Pensumlitteratur til examen philosopicum}\bigskip    
+    \end{center}
+    
+    
+    \textbf{Exphil 1 - Filosofi- og vitenskapshistorie}. 2015, Gyldendal Akademiske forlag\bigskip
+ 
+    
+    \textbf{Exphil 2 - Tekster i etikk}. 2015, Gyldendal Akademiske forlag\bigskip
+
+    
+    (Tidlegare utgåver kan også nyttast: \bigskip
+    
+    \textbf{Exphil 1 - Filosofi- og vitenskapshistorie} 6. utgåve 2013.
+    
+     IFIKK, Universitetet i Oslo.
+     
+     ISBN: 978-82-91670-58-4g\bigskip
+
+    
+    \textbf{Exphil 2 - Tekster i etikk}. 5. utgåve, 2013 eller tidlegare.
+    
+     IFIKK, Universitetet i Oslo.
+     
+     ISBN: 978-82-91670-57-7)
+    
+\subsection{Exphil 1}\bigskip
+\begin{center}
+
+\textbf{Exphil 1 pensum}\bigskip
+
+\begin{tabularx}{0.75\textwidth}{| X | X | X |}\hline	
+            Filosof
+            &
+            Kompendium ref.
+            &
+            Kjelde \\ \hline
+            Platon 
+            &
+            \ref{platon}
+            &
+            kap. 3 - 4 og 20
+            \\ \hline
+            Aristoteles 
+            &
+            \ref{aristoteles}
+            &
+            kap. 5 - 8 og 21
+            \\ \hline
+            René Descartes 
+            &
+            \ref{descartes}
+            &
+            kap. 9 - 10 og 22
+            \\ \hline
+            David Hume 
+            &
+            \ref{hume}
+            &
+            kap. 11 - 12 og 23
+            \\ \hline
+            Immanuel Kant 
+            &
+            \ref{kant}
+            & 
+            kap, 13 -16 og 24
+            \\ \hline
+            Simone de Beauvoir 
+            &
+            \ref{beauvoir}
+            & 
+            kap. 17 - 19 og 25 - 27
+            \\ \hline
+    \end{tabularx}
+\end{center}
+
+\subsection{Exphil 2}\bigskip
+\begin{center}
+
+\textbf{Exphil 2 penusm}\bigskip
+
+\begin{tabularx}{0.75\textwidth}{| X | X | X |}\hline	  
+            Tema
+            &
+            Kompendium ref.
+            &
+            Kjelde \\ \hline
+            Relativitisme 
+            &
+            \ref{relativisme}
+            &
+            kap. 1 - 3
+            \\ \hline
+            Utilitarisme 
+            &
+            \ref{utilitarisme}
+            &
+            kap. 5 - 6
+            \\ \hline
+            Deontologi
+            &
+            \ref{deontologi}
+            &
+            kap. 7
+            \\ \hline
+            Dydsetikk 
+            &
+            \ref{dydsetikk}
+            &
+            kap. 8
+            \\ \hline
+            Foster og dyrs moralske status, miljøetikk 
+            &
+            \ref{fdms}
+            & 
+            kap, 9 - 12
+            \\ \hline
+            Feministisk etikk 
+            &
+            \ref{femimisme}
+            & 
+            kap. 4
+            \\ \hline
+    \end{tabularx}
+\end{center}\clearpage
+\twocolumn
+\section{Platon}
+\label{platon}\bigskip
+
+Platon var ein gresk filosof som levde frå 427-437 f.Kr. Han har hatt stor innflytelse på europeisk kultur, ikkje minst gjennom ei tidleg kristen tenker som Augustin (350-430 e.Kr). Då Platon var i 40-års alderen grunnla han ein eigen skule i Athen, som vart kalla for Akademiet. Akademiet vart fyrst lagt ned 500 e.Kr.\bigskip
+
+I Platons dialoger er Sokrates (470-399 f.Kr) hovudfiguren. I motsetnad til dei tidlege greske naturfilosofane som hovudsakleg var opptatt av verdas urstoff og oppbygning, stilte Sokrates spørsmål om menneskets sjelelige natur. Eit hovudspørsmål er erkjennelsesteoretisk: \textit{Kva er kunnskap eller viten? Korleis kan menneska oppnå viten?}\bigskip
+
+I dialogen Menon er nettopp dette spørsmålet sentralt. Aristokraten Menon diskuterer med Sokrates og dei svarene Sokrates gjev er aktuelle også å våre dagers vitenskaper. Platon får fram at det er berre gjennom fornufta at mennesker får innsikt i sanninga. Platon var \textbf{rasjonalist} (\ref{rasjonalisme}) , i motsetnad til empirister (\ref{empirisme}), som meiner at me kunnskap kun kan oppnåast gjennom sanseerfaring.\bigskip
+
+I utdraget frå \textit{Staten}, syner Platons rasjonalisme seg også i hans teori om korleis det perfekte samfunn må organiserast. Leiarane av Staten må vera filosofar dvs. dei som har innsikt i Det Gode og som me det veit kva innbyggarane trenger av lover og forordninger. Platon meinte også at kvinner har anlegg for å bli filosofer og dermed leiara av Staten, som er ein nokså radikal tanke i dåtidas Hellas.\bigskip
+
+\begin{center}
+Litteratur:    
+\end{center}
+
+\begin{itemize}
+    \item Menon
+    \item Staten
+\end{itemize}\bigskip 
+
+\begin{center}
+Sentralt ang. \textit{Platon}:    
+\end{center}
+
+\begin{itemize}
+    \bigskip
+    
+    \item Dyd
+    \item Dualistisk verdssyn
+    \item Motstandar av sofisme
+    \item Sokrates var hans læremeister
+    \item Sokratisk ironi
+    \item Sokrates ser på seg sjølv som jordmor, der han er med på å få samtalepartnaren til å føde innsikt
+    \item Gjenerindringslæra (læring kun gjenerindring av tidligere viten.Sjela er nemlig udødelig, og har blitt født mange gongar tidligare)
+    \item Sann/usann oppfatning
+    \item Den udødelige sjel
+    \item Rasjonalist (\ref{rasjonalisme})
+    \item Dydsetikar (\ref{dydsetikk})
+     
+\end{itemize}\bigskip
+
+    \subsection{Studiespørsmål}
+    \underline{\textbf{Disclaimer:}} Disse spørsmålene og svarene er ikke ment til 
+    å være noe \textquote{fasitsvar}, så det anbefales å ta alle disse svarene med en 
+    klype salt for deretter å sjekke ut ting selv.
+        \subsubsection{``Gi en kort beskrive av Sokrates' spørremetode.''}
+        Den sokratiske spørremetoden går fortalt ut på at Sokrates ønsker at vedkommende 
+        skal ``føde'' frem ideen bak kunnskapen som det stilles spørsmål om. 
+        Dette skjer da ved at Sokrates oppfører seg om en mentor/jordmor hvor
+        han stiller veiledende spørsmål for å få frem ideen. \medskip
+
+        \subsubsection{``Hva mener (Platon) Sokrates med dyd? Nevn noen dyder.''}
+        ``Hos Platon er moralsk dygd knyttet til viten, det er en menneskelig 
+        karaktertilstand som innebærer viten om og begrunnelse av hva som er godt 
+        og dårlig. Viten om hva som er etisk godt, og bruk av slik viten, fører 
+        ifølge Platon til lykke (\textit{eudaimonia}). Eksempel på moralsk 
+        dygd hos Platon er kardinaldydene 'måtehold', 'mot', 'visdom' og 
+        'rettferdighet' ''\cite{snl_dyd} \medskip
+
+        \subsubsection{``Hva mente sofistene med dyd?''}
+        ``Sofistene betraktet sannhet og moral som menneskers verk. I motsetning til 
+        det tidlgere syn at moral og sannhet er naturgitt, mente sofistene at de var 
+        sedvaner. Sofistenes tenkning var først og fremst negativ, idet den virket for 
+        en oppløsning av disse sedvanene. Siden moralen ikke lenger hadde sin basis
+        i naturen, men i den enkeltes fornuft, fulge en sterk individualisme. Ofte
+        førte dette til \textit{skeptisisme, relativisme} eller til og med 
+        \textit{nihilisme}.'' \cite{snl_sofist} \medskip
+        
+        \subsubsection{``Hvorfor er erkjennelse av egen uvitenhet så viktig for Sokrates'
+        metode?''}
+        Det er først når en erkjenner sin egen uvitheten at en kan lære, mener Sokrates.
+        Dette på grunn av at det kan være at en har feil oppfatning angående 
+        det en tror er riktig, og dermed så vil en ikke være åpen for diskusjon, 
+        ettersom en \textit{tror} en har rett. Derfor så er det første, 
+        men og det viktigste steget i følge Sokrates det å erkjenne sin egen 
+        uvitheten. \medskip
+
+        \subsubsection{``På hvilken måte er kunnskap 'gjenerindring'?''}
+        \textit{Kommentar; Litt usikker på hva spørsmålet helt ønsker, så ta svaret med 
+        en stor klype salt}
+
+        Kunnskap er gjenerendring med tanke på at det kan forklares med at 
+        det som gjenerindres blir som å lære seg selv om opp til noe. 
+        Bare at det er sjelen som inntar rollen som lærer/mentor, og den 
+        nåværende kroppen blir da studenten som blir lært opp. På samme måte som ved 
+        kunnskap, at det skal være mulig å lære dette bort, igjen ved lærer - student
+        forholdet. \medskip
+
+        \subsubsection{``Hva betyr det at dyd er kunnskap? 
+        Hva er denne kunnskapens forhold til 'vanlige' dyder som 
+        sindighet, rettferdighet osv - på hvilken måte kan Sokrates mene at mot
+        eller rettferdighet 'er' kunnskap?''}
+        Hvis det viser seg at dyd er kunnskap så må den kunne læres bort. Sokrates 
+        resonnerer seg frem til at at dyd må være forståelse, og også da kunnskap. 
+        Det som er problemet med denne \textit{løsningen} er at, hvem er det som er 
+        lærerne, og hvem er det som er studentene i denne sammenhengen her? Sokrates 
+        mener at det er sofistene som er lærere av dyden. Noe som ikke blir så 
+        veldig godt mottatt hos Anytos. 
+
+        Det som derimot skille dyd som en kunnskap fra de \textit{vanlige} dydene,
+        er at de \textit{vanlige} dydene ble som oftest ikke lært bort, men
+        at de heller gjennom deres sanne oppfatninger så handlet de tidligere
+        atenske borgerne tilsynelatende rettferdig. \cite{wiki_Menon} \medskip
+
+        \subsubsection{``Mot slutten av dialogen virker det som Platon (Sokrates) 
+        stiller seg mer tvilende til at dyd er viten. Hvordan kommer dette fram?''}
+        
+        \begin{displayquote}[\cite{wiki_Menon}]
+            Ut fra denne tankegang, Menon, ser dyden ut til å komme ved guddommelig 
+            lodd til dem den kommer til. Men vi vil oppnå klarhet i dette når vi
+            går i gang med å undersøke hva dyd i seg selv er, før vi undersøker
+            hvordan dyd kommer til mennesker. Nå er det på tide at jeg går. 
+            Men det du er blitt overtalt om, må du overtale din utenlandske venn
+            Anytos om, slik at han blir midlere. Hvis du får han overtalt ham, 
+            vil du gjøre atherne en tjeneste.
+        \end{displayquote} \medskip
+
+        \subsubsection{``Hvordan kan det sies (Staten) uten selvmotsigelse at kvinner 
+        og menn har forskjellig natur, men at de samtidig har samme natur?''}
+        Det Staten sier angående om å ha forskjellig natur, men allikvell ha samme natur 
+        er basert på hva en vokser opp med/til. Ettersom at som barn så vet du ikke hva
+        du kommer til å bli når du blir stor, men av natur/samfunn så vil en vanligvis
+        få en innsikt i hva foreldre driver med, og dermed så vil en få en spisset natur.
+        Sammenlignbart med at en skomakersønn vil ha samme natur som en datter av en kokk,
+        men forskjellen ligger i at om skomakersønnen kontinuerlig jobber som skomaker,
+        og datteren til kokken jobber med kokkekunst så vil begge disse to få en 
+        \textquote{spisset natur}, og det skal da mye til for at kokken er like god 
+        som skomakersønnen til å være skomaker og \textit{vice versa}. \medskip
+
+        \subsubsection{``I Staten argumenterer Sokrates at kvinner og menn har de samme 
+        naturanlegg for å være voktere i Staten. Samtidig kommer det fram at én 
+        kvinne kan ha anlegg for å være vokter, en annen har det ikke. Hvordan 
+        kan dette forklares?''}
+        \textit{Kommentar; Litt usikker på hvor tidlig/sent det referes til i teksten her,
+        men tar selv utgangspunkt i helt i slutten}
+
+        Det som det diskuteres her i Staten er å beholde en \textquote{ren rase} av 
+        vokterne, dette da ved hjelp av avling, hvor de beste mennene skal være 
+        sammen med de beste kvinnene, og akkurat derfor så vil det kun være 
+        de beste kvinnene som har anlegg for å være vokter. Dette for å forhindre
+        \textquote{urenheter} blant vokterne. De ungene som da ville være en 
+        del av disse urenhetene vil mest sannsynlig bli satt ut 
+        \footnote{Å bli satt ut går ut på å plassere et spedbarn ute på gata for å dø,
+        dette var noe som ble gjennomført i det Gamle Hellas, på den tiden 
+        Sokrates/Platon levde}. Mens avkommet til de beste kvinnene ville bli 
+        tatt hånd om av eksterne folk sånn at disse kvinnene kunne fortsette 
+        sin rolle som vokter, uforstyrret. \medskip  
+
+
+
+\section{Aristoteles}
+\label{aristoteles}\bigskip
+
+Aristoteles var ein gresk filosof som levde frå 384-322 f.Kr. Som Platon, grunnla han óg ein skule i Athen, denne vart då kalla Lykeion, som holdt det gåande til tidleg Middelalder. Aristoteles var ein empirikar (\ref{empirisme}). Han meinte at viten ikkje kan oppnås utan sanseerfaring. Altså at all kunnskap byrjer med observasjon. Noko som er i sterk strid med Platon sine tankar.\bigskip
+
+Alle tinga me kan sanse omkring oss består av to bestanddeler: form og stoff. Stoffet (materien) er det som tingen er laga av, forma er det som gjer at den er det den er t.d vil alle hester ha forma hest i seg, alle kattar vil har forma kat i seg, alle stolar vil ha forma stol i seg osv. Det er tingenes form som gjer at tingen er det den er, og denne forma seie å vera tingen sin essens.\bigskip
+
+Aristoteles tok også opp problemet med forandring. Han hevda at verkelegheita ikkje er statisk, men i kontinuerleg forandring; verkelegheita er dynamisk. Alle ting har i seg viss heilt bestemte moglegheiter, potensialer, og når ein ting forandrer seg tyder dette at den verkelggjer desse potensiala.\bigskip
+
+Ifølge Aristoteles er verkelegheita hierarkisk og teleologisk. At verkelegheita er hierarkisk tyder at kvar ting som eksisterer har si bestemt plass i systemet. At verkelegheita er teleologisk tyder at alt som eksisterer har eit mål som det utvikler seg imot.\bigskip
+
+Sidan mennesket er rasjonelt har det moglegheita til å finne ut kva som er sant, riktig og godt, og for mennesket er målet å leve i overensstemmelse med dette.\bigskip
+
+I \textit{Metafysikken} syner Aristoteles korles menneska stiger opp frå erfaring til stadig høgare form for erkjennelse. Metafysikk tyder i samanhengen kunnskap om dei fyrste prinsipper - dei som kan begrunna alt anna, men som seg sjølv ikkje lar begrunna.\bigskip
+
+Også Aristoteles har øvd sterk innflytelse på europeisk tenkning og vitenskap, ikkje minst gjennom den kristne teologen Thomas Aquinas (1225-1274 e.Kr) som er kanonisert i den katolse kyrkja. I si bok \textit{Om Sjelen} forklarte Aristoteles at menneskets sjel er samansatt av kroppens tre livsprinsipper: ernæring, filosofi og fornuft. Dette er definisjonen på eit menneske. Ein sku tru at Aristoteles måtte meina sjela (= menneske si form) dør med kroppen (=mennesket sitt stoff). Igjen står dette i kontrast til Platon sine tankar, med at sjela er udødelig. Men Aristoteles ka seias å opne at fornuftsdelen av sjela ikkje kan forgå. Denne moglegheita benytta Aquinas seg av i sin teologi.\bigskip
+
+I etikken, som for Aristoteles er ei fortsetjing av biologien, forklarer Aristoteles at menneskelivet har ein funksjon, nemleg å leve i overensstemmelse med fornuften. Dei etiske karakterdydene er ferdigheter som set eit menneske i stand til å oppnå og i oppretthalda lukka.\bigskip
+
+Det er inga hemmeligheit at då både Platon og Aristoteles levde, var nokon menneske slavar, og kvinnene var ufrie og styrt av sine menn. Aristoteles kritiserte ikkje undertrykkinga, men betrakta forholdet som eit empirisk faktum. For \textit{han} var Det Gode Liv førehaldt den frie, velståande mann. 
+
+\begin{center}
+Litteratur:
+\end{center}
+\begin{itemize}
+    \item Metafysikken
+    \item Om sjelen
+    \item Den nikomakiske etikk
+    \item Politikken
+\end{itemize}\bigskip
+
+\begin{center}
+Sentralt ang. \textit{Aristoteles}:
+\end{center}
+\begin{itemize}\bigskip
+    \item Den gyldne middelveg
+    \item Fornuft
+    \item Logikk
+    \item Biologi
+    \item Metafysikk
+    \item Levende vesener er substanser med ein natur
+    \item Ville gjenreise fornuften som ein metode for å oppnå kunnskap om denne verden.
+    \item Empirist (\ref{empirisme})
+    \item Opptatt av naturen og forskning
+    \item Tanker og ideer i bevisstheita er kome av sanseinntrykk (syn/hørsel)
+    \item Form og stoff 
+    \item Tre former for lykke
+    \item Meinte at kvinna var ein "uferdig mann"
+    
+\end{itemize}\bigskip
+
+ \subsection{Studiespørsmål}
+     \underline{\textbf{Disclaimer:}} Disse spørsmålene og svarene er ikke ment til
+     å være noe \textquote{fasitsvar}, så det anbefales å ta 
+     alle disse svarene med en klype salt for deretter å sjekke ut ting selv.
+
+        \subsubsection{\textquote{Hva mener Aristoteles med en \textit{ting}?}}
+        En \textit{ting} er noe som består av form og stoff. Se to spørsmål 
+        nedenfor for en fordypning i hva dette betyr. \medskip
+
+        \subsubsection{\textquote{Hva er substans?}}
+        Aristoteles bruker substans om det som kan ha en selvstendig 
+        eksistens og som dermed kan bære egenskaper. Egenskapene blir dermed 
+        noe som bare kan eksistere gjennom susbstander. Følgelig blir 
+        substans i denne betydning nærmest synonymt med enkeltindivid. 
+        \cite{snl_substans} \medskip
+
+        \subsubsection{\textquote{Hva, i følge Aristoteles, er definisjonene 
+        på et menneske?}}
+        Et menneske blir definert som \textit{zoon logikon} og \textit{zoon politikon},
+        henholdsvis et fornuftsdyr og et politisk dyr. Dette kommer av at 
+        Aristoteles fordeler ulike levende vesener på ulike sjelsnivåer på følgende
+        måte;
+
+        \begin{enumerate}
+            \item \textbf{Vegetative nivået} - Hvor vekstene som tar opp næring,
+            vokser og forplanter seg. 
+            \item \textbf{Animalske nivåe}t - Hvor dyrene lever som kan det samme som 
+            det vegetative, men samtidig kan også sanse og forsøke å få
+            tilfredsstil sine behov.
+            \item \textbf{Rasjonale nivå} - Hvor menneskene lever som 
+            kan tenke og veie ulike handlingsalternativer mot hverandre.
+        \end{enumerate} \medskip
+
+        \subsubsection{\textquote{Hva er form og stoff?}}
+        \begin{itemize}
+            \item \textbf{Form}: er tingenes karakteristiske funksjon eller virkemåte.
+            For levende vesener er formen deres særegne måte å leve på, 
+            eksempelvis er menneskets form sjelsevnene våre. For kunstig tilvirkede
+            ting, det vil si artefakter, er formen det formål de er tilvirket for,
+            eksempelvis for en hammer det å hamre. Kan også sies at form er 
+            \textit{virkelighet}.
+
+            \item \textbf{Stoff}: er \textit{mulighet}, for eksempel så 
+            utgjør menneskets stoff muligheten til et velfungerende menneske, da 
+            ved at stoffet f.eks kan være eksistensen av tenkeorganet, mens årsaken 
+            kan da være å tenke. 
+        \end{itemize} \cite{rephefte_aristoteles} \medskip
+
+        \subsubsection{\textquote{Er det noen forskjeller mellom Aristoteles' teori 
+        om \textit{form} og Platon sine \textit{ideer}}}
+        Platon omtalte formene/ideene til Platon som abstraksjoner, altså noe som 
+        ikke er eksisterende, mens Platon mente at disse ideener var eksisterende ting, 
+        bare i en annen dimensjon. Så kort fortalt har vi;
+
+        \begin{itemize}
+            \item \textbf{Aristoteles}: Formene lever, men ikke uavhengig av tingene
+            vi sanser, de eksisterer som en del av tingene.
+            \item \textbf{Platon}: Formene/Ideene lever, bare ikke i samme dimensjon, men 
+            heller i en ikke-materiell dimensjon.
+        \end{itemize}
+
+        \subsubsection{\textquote{Hva er de fire former for årsak som 
+        Aristoteles oppgir?}} 
+        \begin{enumerate}
+            \item Formårsak - planen for huset
+            \item Stoffårsak - materialene for huset
+            \item Virkeårsak - Arbeidernes innsats
+            \item Målårsak - Å gi husly
+        \end{enumerate} \cite{rephefte_aristoteles} \medskip
+        \subsubsection{\textquote{Aristoteles skiller mellom tre former for kunnskap
+        Hva er disse?}}
+        \begin{itemize} 
+            \item Praktisk vitenskap: som etikk og politikk, tar for seg 
+            hvordan livet bør leves individuelt og kollektivt.
+            \item Produktiv vitenskap: dreier seg om teknisk omgang med verden, mer 
+            presist om fremstilling av artefakter og mestring av naturkreftene.
+            \item Teoretisk vitenskap: forsøker å gjøre rede for grunnleggende 
+            trekk ved virkeligheten og har egenverdi fordi den sammenfaller
+            med menneskets realisering av egen natur. Kan også deles opp igjen;
+            \begin{itemize}
+                \item Naturviten
+                \item Matematikk 
+                \item Metafysikk
+            \end{itemize}
+        \end{itemize} \cite{rephefte_aristoteles} \medskip 
+
+        \subsubsection{\textquote{Hva er det gode liv, i følge Aristoteles?}}
+        Det gode liv handler kort fortalt om å finne \textit{den gyldnemiddelvei}, 
+        altså at en ikke skal lande på hver side av en sak, men heller inngå et 
+        kompromiss for å kunne lande på \textit{midten}. Et eksempel er 
+        at en ikke skal være feig (for lite), men heller ikke for dumdristig (for mye),
+        men heller da finne en mellom ting. Aristoteles omtaler også det gode liv med 
+        at en skal leve overrensstemmelser med sine evner og egenskaper.
+        Aristoteles mente at vi bør leve et så kontemplativt som mulig, altså et 
+        liv hvor man sysselsetter seg selv innenfor abstrakte vitenskaper som 
+        matematikk, astronomi, metafysikk - kort fortalt de vitenskapene som 
+        ikke hadde en direkte praktisk nytte. Han mente i tillegg at et godt liv
+        innebærte også ting som god helse, materiell velstand, gode venner 
+        og at ens barn er veloppdragne. 
+        \textit{hentet fra: \url{filosofi.no/aristoteles}} \medskip
+
+        \subsubsection{\textquote{Hva er forholdet mellom fornuft og følelser?}}
+        Aristoteles hevder at følelsene inneholder et element av fornuft. 
+        Eksempelvis så kan sinne bestå av en fornuftsbasert oppfatning om at
+        man er blitt krenket og et mer følelsesbasert ønske om å ta igjen.
+        Hos en dydig person ser ikke følelsene i konflikt med fornuften.
+        \cite{rephefte_aristoteles} \medskip
+
+        \subsubsection{\textquote{Hvordan kan man oppnå dyd?}}
+        En vil oppnå dyd ved å ha et aktivt liv med utøvelse som praktisk fornuft
+        (\textit{fronesis}), mot, besindighet og generøsitet. Teoretisk fornuft
+        rangeres høyere enn praktift fornuft. Teoretisk fornuft består 
+        av en guddommelig innsikt i de dypeste ting. Som mennesker 
+        lykkes vi ved praktisk , dydig aktitvitet men som vesener med 
+        noe guddomelig i oss, kan vi også realisere \textit{theoria}
+        (teoretisk, dydig aktivitet).\cite{snl_aristoteles} \medskip
+
+        \subsubsection{\textquote{Hva må til for at mennesket skal fungere på
+        sitt beste?}}
+        \textit{Kommentar; Meget usikker på hva det egentlig spørres om her!}.
+
+        Ifølge Aristoteles så må en gjennom praktisk klokskap (fronesis) lære 
+        seg opp til hvilke handlingsalternativ som er de beste. Dette 
+        er ikke noe som naturligvis kommer, men heller en egenskap som vi trener 
+        oss opp til ved hjelp av praktisk trening. Da altså ved å anvende 
+        de teoretisk og generelle kunnskapene relatert til de konkrete 
+        enkelttilfellene som vi imøtekommer. \medskip 
+
+        \subsubsection{\textquote{Kan kvinner oppnå dyd? Forklar}}
+        Kvinner kan oppnå dyd, men de kan ikke oppnå de samme dydene som menn kan. 
+        Dette beskriver Aristoteles med at en som er \textit{styrer} har definitivt 
+        annerledes dyder enn det som en som blir \textit{styrt} har. Og ifølge 
+        Aristoteles så er det mannen som styrer kvinnen og barnet i huset. 
+        Kvinnenes dyd er utviklet, men de har ikke autoritet til å endre dette, 
+        mens barn har ikke autoritet (irrelevant i denne sammenhengen), men deres 
+        dydighet er derimot uutviklet. Så ja, de kan oppnå dyd, men kun dyder som 
+        er \textit{passendes} til en som blir styrt i motsetning til mennene som
+        \textit{styrer} disse kvinnene.
+
+
+\newpage
+\section{René Descartes}
+\label{descartes}\bigskip
+\begin{center}
+    \textit{"Cogito ergo sum"}\bigskip    
+\end{center}
+
+
+Ynskte at kunnskapen skulle vera sikkker. Av dette utvikla han teorier som skulle sørga for at ein oppnådde sikker kunnskap. Såleis var det hovudsakleg epistomologiske spørsmål han jobba med.\bigskip
+
+René Descartes (1596-1650), fransk filosof som representerer den nyare tids filosof. Vitenskaplege forløpara er Koperknikus og Kepler som bryter med aristotelisk kosmologi og biletet av jorda som midtpunkt. Descartes sjøv bryte med det aristoteliske synet på mennesket. Sjela er ikkje eit livsprinsipp for kroppen ifølge Descartes, men heilt uavhengig. Sjela er uforanderlig og lever evig. Kroppen derimot er ei materiell innretning som består av deler som virker saman i ei overensstemmelse med mekaniske naturlover.\bigskip
+
+Sjela består av fornuft, vilje, innbildning og sansingm medan materien ha tre grunnleggjande eigenskapar; lengde, breidde og dybde. Sjela kan difor ikkje beskrivast matematisk, men det kan derimot materien. Descartes bidro til å gjera matematikk til eit reidskapsfag for moderne naturvitenskap.\bigskip
+
+Sjela er ein substans: \textit{Res Cogitas}, dvs. ein tenkande ting, og materien er ein substans: \textit{Res Extensa}, dvs. ein utstrakt ting. Ein substans er per definisjon noko som kan eksistera sjølvstendig. Denne todelinga av verkelegheita kalles gjerne kartesiansk dualisme. Men sjølv om dei to substansane kan eksistera sjøvstendig, vil dei kunna påverka kvarandre: \textit{Gjennom vår frie vilje beveger med kroppen. Gjennom trykk og støyt frå andre ting påverkes kroppens sanseorganer, og sanseinntrykkene oppstår.}\bigskip
+
+Descartes betrakta t.d auga som eit glassprisme og hjarta som ei pumpa. For å forstå korleis noko av dette fungerer må det beskrivast gjennom mekaniske lover. I motsetnad til Aristoteles som meinte at dyr har sjel, nemleg livsprinsippene ernæring og sansning, meinte Descartes at dyr er maskiner eller automater og at alt me kan få om dei er korleis kroppen deira fungerer som mekanistiske innretingar.\bigskip
+
+Descartes avviser Aristoteles si oppfatning om at sanseerfaring kan føre til viten. Viten kan me ifølge Descartes bare oppnå ved ren tenkning, altså fornuftens resonnementer og medfødte innsikter. Sjølv om Descartes er rasjonalist og som følge av det i klasse med Platon, er forskjellen at Descartes er opptatt av å forstå kva den fysiske verkelegheita består av og korleis den fungerer. Platon meinte imidlertid at den sanne verkelegheita ikkje er materiell.\bigskip
+
+\begin{center}
+Litteratur:
+\end{center}
+\begin{itemize}
+    \item Metafysikken
+    \item Meditasjoner over filosofiens grunnlag
+    \item Om metoden
+\end{itemize}\bigskip 
+
+\begin{center}
+Sentralt ang. \textit{Descartes}:
+\end{center}
+\begin{itemize}\bigskip
+    \item Kartesisk tvil
+    \item Religiøs, Gud eksisterer
+    \item Menneske har fri vilje
+    \item Rasjonalist (Som Platon)
+\end{itemize}\bigskip
+
+\section{David Hume}
+\label{hume}\bigskip
+
+Ein av dei fremste empiriske filosofane. Han arbeidde hovudsakleg innan epistemologien. Humes erkjennelsesteorie eg også viktig å få med seg. Alle forestillinger me har, må ha blitt bygd på inntrykk me har fått, dvs. ha si opprinning i eit (eller fleire) inntrykk.
+\bigskip
+
+David Hume (1711-1776), skotsk filosof, er kjend som representant for britisk empirisme (\ref{empirisme}), saman med John Locke og George Berkeley.\bigskip
+
+Humes empirisme er radikal fordi han tvilte på at kunnskap kan nå utover sanseerfaringen. I den forbindelse reknes Hume som skeptikar. Hume er også sett på som ein naturalist, fordi han såg på mennesket som eit dyr utan dei nærmaste guddommelige evnene til fornuftserkjennelse som både Platon, Aristoteles og Descartes trudde på.\bigskip
+
+Hume hevda at me er ute av stand til erkjenne ein natur (Res Extensa) som eksisterer uavhengig av menneskets sinn. Han benekta også at sinnet er sjelelig substans slik Descartes hevda. \bigskip
+
+Hume si analyse av det mekanistiske årsaksbegrepet basere seg på hans oppfatning av korleis menneskesinnet fungerer. Vår bevissthet eller sjel består av persepsjoner. Av desse to typer, nemleg inntrykk og ideer. Dei siste er kopier eller etterlikningar av dei fyrste. Erkjennelse består i at ideane assosierast med kvarandre eller ved at eit inntrykk får oss til å assosiera idear. Sannheita fastslår me når ein ide stemmer overens med eit inntrykk, eller når ein ide stemmer overens med ein anna ide.\bigskip
+
+Inntrykka er ein ytre (farge, lyder elle smaker) eller indre (dvs. kjensler som begjær, svolt eller tyrste, affekter som hat eller kjærleik, sorg eller glede). Der er ifylgje Hume berre kjensler som får oss til å handle.\bigskip
+
+Moral er i all hovudsak godtakelse eller fordømmelse av personer sine karaktereigenskaper, og grunnlaget som for dette er ei kjensla av enten tiltrekning eller avsky. Av dette bryter Hume med tradisjonen frå Platon og Aristoteles som begge søkte moralen som grunnlag i forunft.\bigskip
+
+Hume gjorde seg merksam på skiljet mellom er-utsakn og bør-utsakn. Fornufta kan berre fastslå fakta, medan kjenslene styrer moralske bedømmingar.\bigskip
+
+\begin{center}
+Litteratur:
+\end{center}
+\begin{itemize}\bigskip
+    \item Ein samanfatning av ei nyleg utgitt bok, kalla Ein avhandling om menneskenaturen, osv
+    \item Ein avhandling om menneskenaturen
+\end{itemize}\bigskip 
+
+\begin{center}
+Sentralt ang. \textit{Hume}:
+\end{center}
+\begin{itemize}\bigskip
+    \item Empirist (\ref{empirisme})
+    \item Fellow feeling
+    \item Følelse og tru
+\end{itemize}\bigskip
+
+
+\section{Immanuel Kant}
+\label{kant}\bigskip
+
+Hovudinteresser var epistomologi, etikk, metafysikk og logikk. Hans ideer til filosofien var t.d \textbf{Det katagoriske imperativ} og \textbf{transcendental idealisme}.\bigskip
+
+Immanuel Kant (1724-1804), tysk filosof, utvikla ein alternativ posisjon innan erkjennelsesteorien, sett i forhold til rasjonalisme (Descartes) og empirisme. Nokon historikarar hevde at Kant forente rasjonalisme med empirisme, men dette er tvilsomt sidan rasjonalisme og empirisme motseier kvarandre. Betre er det kanskje å seia at Kant forsøker å overvinna begge retninger.\bigskip
+
+
+Viss erkjennelse eller kunnskap utelukkande var basert på erfaring, ville Hume ha hatt rett: det kan aldri utleiast strengt allmenne og nødvendige innsikter om naturen og oss sjølv frå erfaring.(ref:\bigskip
+
+Men Kant meinte at det innanfor matematikk og fysikk eksisterer setningar som ikkje er utleia frå erfaring men som likevel er objektivt gyldige. Slike setningar er syntetiske a priori, dvs. me veit at dei ikkje er begrunna i erfaring. Erfaringssetningane er syntestisk a postpriori, dvs. deira gyldighet avgjeres gjennom observasjoner og eksperimenter.\bigskip
+
+1700-talet vert kalla for opplysingstida. I filosofi og vitenskap vart det lagt vekt på at menneske aleina evner å finna sannninga og bruka fornuften til det betre for menneskeheita. Newtons mekanikk gav løfter om tekniske framskritt og Kant forklarte korleis den menneskelege fornuft gjennom dei nye matematisk-naturvitenskaplege disipliner kunne få naturen til å tilstå sine hemmelegheitar.\bigskip
+
+
+
+Mekanikken er basert på årsakssetningen: alle hendelser har ei årsak, som Kant såg på som ei fundamental innsikt som beskreiv naturen sine forandringar streng allmenngyldighet og nødvendighet. At naturprosessane fylgjer allmenne og nødvendige lover mogleggjer nøyaktige forklaringer og forutsigelsar: Naturen er fysisk determinert. Veit me korleis eit system er organisert på eitt tidspunkt, skal me i prinsippet kunna vita kva som skjer i all framtid.\bigskip
+
+I metafysikken, som er ei rein filosofisk disiplin, stilte Kant spørsmålet om korleis syntetisk apriorisk erkjennelse er mogleg. Kant ynskte å finna ut kva det er i dei menneskelege erkjennelsesevner som mogleggjer denne typen erkjennelse.\bigskip
+
+Kant ville gjera metafysikken til vitenskap. Det eksisterer fleire vitenskaper, men berre éin definsisjon av viten. Platons definisjon går ut på at den som veit han har sann, begrunna oppfatning. Kant knytter an til denne oppfatninga. Stikkordet er begrunnelse. For Kant må vitenskapleg begrunnelse binde kunnskapene saman i eit systematisk heilhet. Dette systemet må tuftes på allmengyldige prinsipper som kan erkjennes a priori.\bigskip
+
+For Kan omfatta metafysikken også moral. I filosofi skilles det gjerne mellom teoretisk og praktisk filosofi. Moralens metafysikk tilhøyrer den praktiske filosofi. Naturevitenskapens metafysikk tilhøyrer den teoretiske filosofien.\bigskip
+
+\begin{center}
+Litteratur:
+\end{center}
+\begin{itemize}
+    \item Kritikk av den rene fornuft
+    \item Grunnlegging til moralens metafysikk
+    \item Moralens metafysikk
+    \item Antropologi i pragmatisk perspektiv
+\end{itemize}\bigskip 
+
+\begin{center}
+Sentralt ang. \textit{Kant}:
+\end{center}
+\begin{itemize}\bigskip
+    \item Pliktetikar
+    \item Erkjennelse består av tenking og sansing
+\end{itemize}\bigskip
+
+\section{Simone de Beauvoir}
+\label{beauvoir}\bigskip
+
+Simonde de Beauvoir (1908-1986), fransk filosof, var ein av frontfigurane innanfor eksistensialismen slik at denna utvikla seg i Frankrike på 1900-talet. Eksistensfilosofane stilte spørsmål ved tilværinga- Kva er det å vera i verda? Kva innebærer det å velja livet sitt? Korleis kan mennesket sjølv skape ei meining? På kva for måte kan moral forplikte?\bigskip
+
+Innanfor moralteorien har Beavoir ytt verdifulle og originale bidrag til eksistensialismen. Men hennar bok \textit{Det Annet Kjønn} frå 1949 er den mest kjende og den har både har hatt og har uvurderlig betyding for kvinners syn på seg sjølv som mennesker.\bigskip
+
+Beavoir har retta blikket mot individene. Ho skreiv i innleiinga til \textit{Det Annet Kjønn}, at ein god stat berre kan målast på mengden av konkret frihet som sikrer individene. Konkret frihet ifølge Beavoir er dei faktiske moglegheita menneska har til å overskriva sin noverande situasjon ved å velja og forfølga eigne mål i ulike livsprosjekter. Det at eit menneske faktisk kaster seg ut i nye prosjekter kalla Beavoir transcendens. Det motsatte er immanens.\bigskip
+
+Det paradoksale i frigjøringens hundreår (1900-2000) er ifølge de Beavoir at det er stort sett berre menn som har konkret fridom. Kvinnene på hennar tid, også i Frankrike, var i vesentleg grad bundne gjennom økonomiske, juridiske, politiske og religiøse institusjoner. Slik er det for store deler av verdas kvinner, også i dag. Beavoir påviste ulikheta mellom dei to kjønna både historisk og dåtid og stilte spørsmål om kvifor kvinner er underkasta menna sitt herredøme.\bigskip
+
+Det er dette spørsmålet som \textit{Det Annet Kjønn} svarer på. I innleiinga, benektes det at kvinna si skjebne skuldes fysiologiske eller biologiske eigenskapar. Heller ikkje er det noko psykologiske sætrekk ved kvinna som kan forklare forskjellsbehandlinga. Her er Beavoir på linje med Platon slik med kjenner oppfatninga hans ang. Staten.\bigskip
+
+I innleiinga går Beavoir direkte ut mot Aristoteles og mange andre menn, både filosofar of samfunnsdebetantar, historiske og dåtidige. Ho påpeker at kvinnefiendligheta og mannsjåvinisme har gjennomsyra heile den vestlege kulturen, frå gresk oldtid og fram til hennar eige tid.\bigskip
+
+\begin{center}
+Litteratur:
+\end{center}
+\begin{itemize}
+    \item Le deuxième Sexe (det annet kjønn)
+\end{itemize}\bigskip 
+
+\begin{center}
+Sentralt ang. \textit{Beauvoir}:
+\end{center}
+\begin{itemize}\bigskip
+     \item feminist
+\end{itemize}\bigskip
+
+\bigskip
+\section{Relativisme}
+\label{relativisme}
+Er motstand mot tanken om at vitenskapene kan og bør tilstrebe objektivt. Relativistene meinar at det ikkje fins standardar for objektivitet, sannhet eller rasjonalitet som er felles på tvers av forskjellige kulturer og historiske perioder.
+\bigskip
+
+Meiningsrelativisme\bigskip
+\begin{itemize}
+    \item Forenlig med absolutisme (absolutisme; det finnes moralske kriterium som til ei kvar til gjelder for alle menneske. TL;DR utilitarisme)
+    \item Det fins ulike meiningar om handlingstyper som er enten rett eller galt: Det som er rett for ein person, trenger ikkje å vera rett for ein annan person.
+\end{itemize}\bigskip
+
+Konvensjonalisme\bigskip
+\begin{itemize}
+    \item Forenlig med absolutisme
+    \item Ein handling er moralsk rett viss og berre viss den er tillatt ifølge samfunnets konvensjoner
+\end{itemize}\bigskip
+
+Begrepsrelativisme\bigskip
+\begin{itemize}
+    \item Har ikkje noko klart svar på kva som gjer ein handling rett, me må samanlikna. Kva som gjer ein handling rett er relativt til personens interesser, verdier og det moralske systemet han trur på.
+\end{itemize}
+
+\bigskip
+\section{Utilitarisme}
+\label{utilitarisme}\bigskip
+
+Ordet 'utilitarisme' stammer frå det latinske ordet 'utilitas' som tyder 'nytte'. Utilitarismen er ei form for konsekvensialisme.\bigskip
+
+
+Utilitarismen er moralfilosofi, ein filosofi for moralske problemstillinger, som prøver å formulera etiske og sosiale problemstillingar på ein slik måte at det tilfredstiller empiriske krav. Handlinger er etisk riktig viss dei er nyttige, dette tyder at handlingen må føre til at konsekvensene i seg sjølv er gode. Det som er godt i seg sjølv har eigenverdi, og ifølge utilitaristen er dette lyst eller fråvær av smerte. Lyst eller nytelse omfatter både fysisk og psykisk velvære.\bigskip
+ 
+
+
+Utilitarismen kort oppsumert:\bigskip
+\begin{itemize}
+    \item Kva som avgjer om ei handling eller ei beslutning frå eit moralsk synspunkt er god eller ikkje, er kva for konsekvenser den har.
+    \item Det er viktig når me skal vurdere konsekvensene som er dårlege eller ikkje, at ein tar med i kva for grad av lykke eller ulykke dette medfører.
+    \item Når me skal vurdere summen av lykke eller ulykke så tel alle sansende, levende vesener likt. 
+\end{itemize}\bigskip
+
+Regelutilitarister handler ut i frå hensiktsmessige regler: viss det er sannsynleg at det å fylgja ein bestemt regel alt i alt gjev best konsekvenser for menneskeheta, så \textbf{skal} den fylgast.\bigskip
+
+Handlingsutilitarister setter slike regler til side og vurderer berre den enkelte handling opp mot alternativa: vel det alternativet som, i den bestemte situasjonen du er i, mest sannsynleg vil maksimera lukka.
+
+\bigskip
+\section{Deontolgi}
+\label{deontologi}\bigskip
+
+Ordet 'deontologi' kjem av det greske substantivet 'to deon' som tyder 'læra om det som må gjerast'. Deontologien vert inndelt i handlingar i slike me skal utføra, slike som me ikkje skal utføra og slike som er tillat, dvs. at me kan utføra dei om me ynskjer.\bigskip
+
+Uttrykk som "skal" og "skal ikkje" indikerer henholdsvis påbud og forbud. Påbud og forbud er plikter og deontologi er difor ein type pliktetikk. Eit påbud kalle gjerne for ei positiv plikt, medan eit forbud då vert kalla for ei negativ plikt.\bigskip
+
+Immanuel Kant reknes av mange som den store pliktetikaren.\bigskip
+
+Deontologi er ein teori som seier at val skal baseres på regler eller moralske prinsipper, og at der 'riktiga valet' veg tyngre enn resultatane.\bigskip
+
+Deontologi er pliktetikk. I dette ligg det at det må finnes abolutte regler me vil vera pliktige å overhalda. \bigskip
+
+Deontologi er ikkje ein einheitleg moralteori, men består av ei gruppe teorier som deler nokon av dei viktige kjenneteikna. Immanuel Kant er den mest kjente og innflytelsesrike deontologen.\bigskip
+
+Deontologer, pliktetikere, deler ein svært sentral grunntanke. Det er at ein ikkje skal nytta seg av andre personer for å kun oppnå eige gode. Denne ideen baserer seg på at personer innehar eit sett med rettigheter som ikkje skal krenkast. \bigskip
+
+Eit døme på tankesettet til deontologane er at sjølv om me ikkje skal skada ein person, så kan det i nokon tilfeller vera tillat å nettop gjere det. \bigskip
+
+Deontologi vert av mange forstått som det motsatte at utilitarisme, eller generelt: konsekvensetikk. Men også utilitarismen er basert på ein universell pliktetisk regel, nemleg at du skal utføra den handlinga fører til dei beste konsekvensane for alle involverte partar.\bigskip
+
+Nokon hevder difor at forskjellen mellom deontologi og utilitarisme er at den deontologiske teori påbyr eller forbyr typer av handlingar utan å skjele til konsekvensar. Ei handling bør i det minste definerast som noko me gjer med visse konsekvenser som følgje.\bigskip
+
+\section{Dydsetikk}
+\label{dydsetikk}\bigskip
+
+Dydsetikk, ein form for moralteori som baserer seg på begrepet om dyd. Moderne dydsetikk tar utgangspunktet i Aristoteles sin dydsetikk. Å tileigna seg dyder krever livserfaring, ergo det er ingen som er født dydige.\bigskip
+
+Det fins ulike varianter av dydsetikk, men dei har alle saman til felles at begrepet om dyd speler ei sentral eller uavhengig rolle i å besvare moralske spørsmål. Dydsetikken er ein av dei tre leiande teoriane innan normativ etikk. Store delar av den moderne dydsetikken har røtter i etikken til Aristoteles.\bigskip
+
+Dei to andre leiande teoriane innan normativ etikk, deontologi og utilitarisme, har begge til felles at dei har som hovedformål å formulera allmenne prinsipper som er meint å bestemma kva som er riktige og gale handlinger. Dei er med andre ord ute etter prinsippielle kriterier som me kan anvenda i bestemte situasjoner for å utleie riktig handling.\bigskip
+
+Dydsetikk fokuserer derimot på den handlendes karakter heller enn reglar for riktig atferd. Dydsetikken vil typisk meina at det ikkje lar seg gjera å firmulera nokon allmenngyldig regel som kan ta hensyn til alle forhold som kan vera moralsk viktig i dei enkelte situasjoner. Gjennom erfaring er det mogleg å opparbeida seg ei evne til følsomhet ovanfor korleis ulike forhold kan vera moralsk relevant i ulike situasjoner.\bigskip
+
+Dydsetikk er ein del av den normative etikken. I motsetnad til utilitarismen og deontologien, som forsøker å definere allmenne prinsipper om kva som er riktige og gale holdninger. Så forsøker dydsetikken heller å fokusera den den handlenes karakter. Dydsetikarane vil typisk meina at det ikkje vil vera mogleg å formulera noko allmenngyldig regel som kan ta forhold til alle moralske dilemmaer i ein gitt situasjon. Dei meiner vidare at moral er noko som vert lært gjennom erfaring. Gjennom erfaring er det mogleg å opparbeide seg ei evne til følsomhet ovanfor korleis ulike forhold kan vera moralsk relevante i ulike situasjoner. 
+
+Dydsetikara vil også meina at dei skil seg frå deontologer og utilitaristar ved at dydsetikken ikkje berre er ut etter kva som utgjer ei riktig handling. Moralske vurderinger må fokusera vel så mykje på korlei ein person bør vera, og på kva holdninger som ligger tuk grunn for ein persons atferd. \bigskip
+
+
+\section{Foster og dyrs moralske status, miljøetikk}
+\label{fdms}\bigskip
+
+Miljøetikk er den greina av etikken som analyserer og/eller begrunner verdiene og dei normative reglane som underligger menneskers forhold til miljøet, dvs. til den levande og ikkje-levande naturen.\bigskip
+
+Det er mange forskjellige retningar i miljøetikken. Dette kan t.d vera deontologi (pliktetikk) eller konsekvensialistisk (konsekvensetikk). 
+
+\section{Feministisk etikk}
+\label{femimisme}\bigskip
+
+Feministisk etikk baserer seg på eit sterkt ynskje om å få slutt på undertrykkelsen, utnyttelsen og mishandling av kvinner, kvar enn dette måtte føregå. Spesielt pornografi og prostitusjon har og er viktige saker for feministane. 
+
+\section{Rasjonalisme}
+\label{rasjonalisme}\bigskip
+
+\textit{Rasjonalisme, det syn at fornuften og tenkningen, ikkje sansene, er dei verkelige kunnskapskjeldene}
+
+\section{Empirisme}
+\label{empirisme}\bigskip
+
+\textit{Empirisme, erfaringslæra, erfaringsfilosofi; læra om at alle påstandar om verkelegheita skal ha sitt grunnlag i erfaringen og at den er vår eineste kunnskapskjelde. Motsatt: rasjonalisme. Viss erfaringen tenkes utelukkande som sansing, kalles empirismen for sensualisme.}
+\section{Ontologi}
+\label{ontolog}\bigskip
+
+\textit{Er studiet om kva som eksisterer, og former for eksistens.}
+\bigskip
+
+\section{Normativ etikk}
+\label{normativetikk}\bigskip
+
+Normativ etikk, er ein del av etikken som prøver å ta standpunkt til kva som er rett og galt, godt og ondt. Normativ etikk er ein av etikkens tre hovudgreiner, saman med metafysikken og anvendt etikk. Innanfor vestleg filosofi har normativ etikk fått viktige bidrag frå Aristoteles og Platon (dydsetikk, den gyldne middelveg), David Hume (Humes lov), Immanuel Kant (Det kategoriske imperativ, pliktetikk), Jeremy Bentham og Jon Stuart Mill (utilitarisme)
+\bigskip
+
+\section{Eksistensialisme}
+\label{eksistensialisme}\bigskip
+
+Eksistensialisme er motstandara av å bygga opp altomfattande filosofiske systemer med standpunkter innan metafysikk, epistomologi (kunnskapsteori), etikk osv.\newline
+
+Eksistensialistane hevda at verkelegheita er absurd, at den ikkje kan forståast ved hjelp av fornufta, og at ein difor må benytta ikkje-rasjonelle erkjennelsesmetoder som tru, kjensler, intuisjon, vilje. Sannheten kjem innanfrå, 'kunnskap er subjektiv', hevda Kierkegaard. Eksistensialistane er også motstandara av determinisme. 
+
+\bigskip
+\section{Det kategoriske imperativ}
+\label{detkategoriskeimperativ}\bigskip
+
+Det kategoriske imperativ er eit prinsipp for moralsk handling formulert av Immanuel Kant i verket \textit{Grunnleggingen til moralens metafysikk}.\bigskip
+
+Kant forsøker i dette verket å fastsetja 'Moralens øvste prinsipp'. Kant hevda at det krevdes universell gyldighet i dei moralske pliktene, ein moralsk plikt for ein person må også naudsynt også vera ein moralsk plikt for alle andre også. Dette vil kort sagt seia at ein må velja sine prinsipper for handlinger etter kva for prinsipper ein vil at andre skal velja for sine. TL;DR den gyldne middelveg: 'Alt dere vil at andre skal gjøre mot dere, skal også dere gjøre mot dem.' (Kristendommen)
+
+\bibliography{platon_kilder,aristoteles_kilder}
+\end{document}

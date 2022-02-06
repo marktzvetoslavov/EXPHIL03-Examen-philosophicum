@@ -1,0 +1,12 @@
+#.tex ignore files
+*aux
+*bbl
+*dvi
+*fdb_latexmk 
+*fls 
+*log 
+*out 
+*gz 
+*toc 
+*~
+*blg
